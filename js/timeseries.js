@@ -7,8 +7,6 @@ var chart = function(file, id) {
     timestamps[0] = 'Timestamp'
     price[0] = 'Open'
 
-
-
     var chart = c3.generate({
       bindto: id,
       data: {
