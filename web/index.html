@@ -1,15 +1,84 @@
+<html class="no-js" >
+<head>
+<meta charset="utf-8" />
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <link href="https://cdnjs.cloudflare.com/ajax/libs/c3/0.4.10/c3.min.css" rel="stylesheet" />
+<link href="css/index.css" rel="stylesheet" />
+
+<!-- Compressed CSS -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/foundation-sites@6.5.0-rc.2/dist/css/foundation.min.css" integrity="sha256-iJQ8dZac/jUYHxiEnZJsyVpKcdq2sQvdA7t02QFmp30= sha384-SplqNBo/0ZlvSdwrP/riIPDozO5ck8+yIm++KVqyMAC53S6m3BaV+2OLpi7ULOOh sha512-ho6hK4sAWdCeqopNZWNy1d9Ok2hzfTLQLcGSr8ZlRzDzh6tNHkVoqSl6wgLsqls3yazwiG9H9dBCtSfPuiLRCQ==" crossorigin="anonymous">
+
+</head>
+<body>
+
+<a href="#" class="cta">Configure Wallet</a>
+<div class="grid-x">
+  <div class="cell small-12 medium-6 large-3 padded"><h2>Coins</h2>
+    <table>
+      <thead>
+        <th>Pair</th>
+        <th>Volume (24hr btc)</th>
+        <th>Price (btc)</th>
+      </thead>
+      <tbody id="example-1">
+        <tr v-for="symbol in symbols">
+          <td><a href="#">{{ symbol.ticker }}</a></td>
+          <td>{{ symbol.volume }}</td>
+          <td>{{ symbol.price }}</td>
+        </tr>
+      </tbody>
+    </table>
+
+  </div>
+  <div class="cell small-12 medium-6 large-9 padded"><h2>Graph</h2>
+    <a href class="scale">1D</a> <a href class="scale">1W</a> <a href class="scale">1M</a> 
+    <div id="chart2"></div>
+
+    <div class="grid-x">
+      <div class="cell small-6">
+        <div class="card">
+
+          <h3>Buy</h3>
+          Order type:<select><option>Market</option><option>Limit</option></select>
+
+          Price:<input type="text" />
+
+          <button type="button" class="button">Submit</button>
+
+        </div>
+      </div>
+      <div class="cell small-6">
+        <div class="card">
+
+          <h3>Sell</h3>
+          Order type:<select><option>Market</option><option>Limit</option></select>
+
+          Price:<input type="text" />
+
+          <button type="button" class="button">Submit</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
 <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.6/d3.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/c3/0.4.10/c3.min.js"></script>
-
-
-
-<div id="chart"></div>
-
-<div id="chart2"></div>
-
-
-<div id="chart3"></div>
-
-
 <script src="js/timeseries.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.18.0/axios.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.1.6/vue.min.js"></script>
+<script src="js/exchange.js"></script>
+<script src="js/view.js"></script>
+
+
+<!-- Compressed JavaScript -->
+<script src="https://cdn.jsdelivr.net/npm/foundation-sites@6.5.0-rc.2/dist/js/foundation.min.js" integrity="sha256-G6jsRyH1fxbsvFIXSCuwYmI1aIDYBa28xscrvmYjJy0= sha384-vtoG68NvPc9azmFJr447vvY8qgdyA4FdaJ5/bqvzIM4eAdZfO0iyRRF8l2AAscYI sha512-43seCcNrHA0BQgrtyajB9sp8yOdv5c8QdYvgjP7zJ7v+dmzAcxYDQ2gupb9aztsNWBq1COIp/3NHYkQs4l/dkg==" crossorigin="anonymous"></script>
+    <!--script>
+      $(document).foundation();
+    </script-->
+
+</body>
+</html>

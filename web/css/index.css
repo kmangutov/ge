@@ -1,0 +1,19 @@
+.card {
+	padding: 20px;
+	margin: 15px;
+	border: solid 1px;
+}
+
+.cta {
+	margin: 30px;
+	font-size: 22px;
+}
+
+.padded {
+	padding: 20px;
+}
+
+.scale {
+	font-size: 12px;
+	text-decoration: underline
+}
