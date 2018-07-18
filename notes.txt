@@ -1,0 +1,5 @@
+shared style bween components: https://stackoverflow.com/questions/48806433/sharing-common-css-across-vuejs-components
+
+starter: https://github.com/Microsoft/TypeScript-Vue-Starter
+
+npm run build
